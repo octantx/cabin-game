@@ -65,7 +65,17 @@ import random
 
 themeArray = ["red"]
 
-saveState = open("SaveState.txt")
+try:
+    
+    saveState = open("SaveState.txt")
+
+except:
+    
+    print("\"SaveState.txt\" cannot be found, please reinstall the program or ensure that \"SaveState.txt\" is within the same directory as the executable.")
+    
+    input("")
+    
+    sys.exit()
 
 saveContent = saveState.read()
 
