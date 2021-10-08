@@ -9734,13 +9734,18 @@ def credits():
           | $$ \______/ |__/      \_______/ \______/ |__/  |__/
      /$$  | $$                                                 
     |  $$$$$$/                                                 
-     \______/          
+     \______/
      
-    Version: {ver} | {date}                                       
+    Github: https://github.com/octantx
+     
+    Version: {ver} | {date}  
+    
+    Ascii Text: http://www.patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
+    Ascii Art: https://www.asciiart.eu & https://ascii.co.uk/art
     """, "magenta", attrs=["bold"]))
     
     # ? Wait 3 seconds
-    time.sleep(2.3)
+    time.sleep(4)
     
     # ? Go back to the start menu
     startMenu()
