@@ -1,14 +1,14 @@
 Sanity:
-Sanity=1
+Sanity=0
 
 Inventory:
 
-RustyNecklaceGot=True
+RustyNecklaceGot=False
 RustyKeyGot=False
 PristineKeyGot=False
 FeatherGot=False
 PaperGot=False
-QuillGot=True
+QuillGot=False
 MapGot=False
 StarsGot=False
 KnifeGot=False
@@ -24,7 +24,7 @@ Interactions:
 
 BoxOpened=False
 DoorOpened=False
-QuillMade=True
+QuillMade=False
 MapMade=False
 RugMoved=False
 HatchOpened=False
@@ -59,14 +59,14 @@ FinalDoorOpened=False
 
 Map State:
 
-FirstRoom=True
+FirstRoom=False
 SecondRoom=False
 ThirdRoom=False
 FourthRoom=False
 FifthRoom=False
 
 Killer Location:
-Location=5
+Location=0
 
 Theme:
 Theme=Red
