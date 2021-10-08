@@ -3,7 +3,7 @@ Sanity=0
 
 Inventory:
 
-RustyNecklaceGot=False
+RustyNecklaceGot=True
 RustyKeyGot=False
 PristineKeyGot=False
 FeatherGot=False
@@ -59,14 +59,14 @@ FinalDoorOpened=False
 
 Map State:
 
-FirstRoom=False
+FirstRoom=True
 SecondRoom=False
 ThirdRoom=False
 FourthRoom=False
 FifthRoom=False
 
 Killer Location:
-Location=0
+Location=5
 
 Theme:
 Theme=Red
