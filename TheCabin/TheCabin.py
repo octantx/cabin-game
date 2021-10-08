@@ -24,10 +24,13 @@
     # * The Cabin | 20/9/21 | version B0.95: Kitchen fully complete and living room ready to be made
     # * The Cabin | 25/9/21 | version F1.00: Full game complete, full release
     
+# ? Blankspace function is created to clear up the terminal periodically
 def blankspace():
     
     for i in range(45):
         print("")
+
+saveStateLocation = "TheCabin/SaveState.txt" # ! To be changed when packaging
 
 # ? Version number variable is created so I don't have to find every instance of the version being mentioned and change it
 ver = "v1.00"
@@ -71,7 +74,7 @@ themeArray = ["red"]
 
 try:
     
-    saveState = open("SaveState.txt")
+    saveState = open(saveStateLocation)
 
 except:
     
@@ -126,9 +129,9 @@ elif findMagenta:
     
 def overwrite():
     
-        saveState = open("SaveState.txt", "rt")
+        saveState = open(saveStateLocation, "rt")
         
-        saveSanityState = open("SaveState.txt")
+        saveSanityState = open(saveStateLocation)
         
         saveSanity = saveSanityState.readlines()
         
@@ -148,7 +151,7 @@ def overwrite():
         
         saveSanityState.close()
         
-        saveState = open("SaveState.txt", "wt")
+        saveState = open(saveStateLocation, "wt")
         
         saveState.write(saveContent)
         
@@ -164,11 +167,11 @@ def overwrite():
             
         saveState.close()
         
-        saveState = open("SaveState.txt", "wt")
+        saveState = open(saveStateLocation, "wt")
         
         saveState.write(saveContent)
         
-        saveState = open("SaveState.txt", "rt")
+        saveState = open(saveStateLocation, "rt")
         
         saveContent = saveState.read()
         
@@ -176,21 +179,21 @@ def overwrite():
             
             saveContent = saveContent.replace("Location=3", "Location=0")
             saveState.close()
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             saveState.write(saveContent)
             
         elif find4:
             
             saveContent = saveContent.replace("Location=4", "Location=0")
             saveState.close()
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             saveState.write(saveContent)
             
         elif find5:
             
             saveContent = saveContent.replace("Location=5", "Location=0")
             saveState.close()
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             saveState.write(saveContent)
             
         saveState.close()
@@ -198,7 +201,7 @@ def overwrite():
 # ? Define the function called "game" which is called when the user selects the option to begin the game
 def game():
     
-    saveState = open("SaveState.txt")
+    saveState = open(saveStateLocation)
     
     saveContent = saveState.read()
     
@@ -606,7 +609,7 @@ You move closer to the middle door, stepping on the mixture of food and blood wh
             
             death()
     
-    saveState = open("SaveState.txt", "r")
+    saveState = open(saveStateLocation, "r")
     
     saveContent = saveState.read()
     
@@ -7378,9 +7381,9 @@ You failed and he knows you failed.
     
         mapStateUseable = str(mapState)
         
-        saveState = open("SaveState.txt", "rt")
+        saveState = open(saveStateLocation, "rt")
         
-        saveSanityState = open("SaveState.txt")
+        saveSanityState = open(saveStateLocation)
         
         saveContent = saveState.read()
         
@@ -7400,7 +7403,7 @@ You failed and he knows you failed.
             
         saveState.close()
         
-        saveState = open("SaveState.txt", "wt")
+        saveState = open(saveStateLocation, "wt")
         
         saveState.write(saveContent)
         
@@ -7444,7 +7447,7 @@ You failed and he knows you failed.
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7456,7 +7459,7 @@ You failed and he knows you failed.
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7468,7 +7471,7 @@ You failed and he knows you failed.
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7480,7 +7483,7 @@ You failed and he knows you failed.
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7488,13 +7491,13 @@ You failed and he knows you failed.
             
         if pristineKeyGotCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("PristineKeyGot=False", "PristineKeyGot=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7502,13 +7505,13 @@ You failed and he knows you failed.
             
         if featherGotCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("FeatherGot=False", "FeatherGot=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7516,13 +7519,13 @@ You failed and he knows you failed.
             
         if paperGotCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("PaperGot=False", "PaperGot=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7530,13 +7533,13 @@ You failed and he knows you failed.
             
         if quillGotCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("QuillGot=False", "QuillGot=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7544,13 +7547,13 @@ You failed and he knows you failed.
             
         if mapGotCheck:
                 
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("MapGot=False", "MapGot=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7558,13 +7561,13 @@ You failed and he knows you failed.
         
         if knifeGotCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("KnifeGot=False", "KnifeGot=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7572,13 +7575,13 @@ You failed and he knows you failed.
             
         if pistolGotCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("PistolGot=False", "PistolGot=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7586,13 +7589,13 @@ You failed and he knows you failed.
             
         if bucketGotCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("BucketGot=False", "BucketGot=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7600,13 +7603,13 @@ You failed and he knows you failed.
             
         if bronzeKeyGotCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("BronzeKeyGot=False", "BronzeKeyGot=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7614,13 +7617,13 @@ You failed and he knows you failed.
             
         if silverKeyGotCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("SilverKeyGot=False", "SilverKeyGot=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7628,13 +7631,13 @@ You failed and he knows you failed.
         
         if goldKeyGotCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("GoldKeyGot=False", "GoldKeyGot=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7712,13 +7715,13 @@ You failed and he knows you failed.
         
         if goldKeyRugMovedCheck:
 
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("GoldKeyRugMoved=False", "GoldKeyRugMoved=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7726,13 +7729,13 @@ You failed and he knows you failed.
             
         if goldHatchOpenedCheck:
 
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("GoldHatchOpened=False", "GoldHatchOpened=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7740,13 +7743,13 @@ You failed and he knows you failed.
             
         if finalDoorOpenedCheck:
 
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("FinalDoorOpened=False", "FinalDoorOpened=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7754,13 +7757,13 @@ You failed and he knows you failed.
         
         if paintingMovedCheck:
 
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("PaintingMoved=False", "PaintingMoved=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7768,13 +7771,13 @@ You failed and he knows you failed.
             
         if safeOpenedCheck:
 
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("SafeOpened=False", "SafeOpened=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7782,13 +7785,13 @@ You failed and he knows you failed.
         
         if wardrobeMovedTrolleyCheck:
 
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("WardrobeMovedTrolley=False", "WardrobeMovedTrolley=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7796,13 +7799,13 @@ You failed and he knows you failed.
             
         if panelOpenedCheck:
 
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("PanelOpened=False", "PanelOpened=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7810,13 +7813,13 @@ You failed and he knows you failed.
         
         if handTrolleyDroppedOffCheck:
 
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("HandTrolleyDroppedOff=False", "HandTrolleyDroppedOff=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7824,13 +7827,13 @@ You failed and he knows you failed.
         
         if boxOpenedCheck:
 
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("BoxOpened=False", "BoxOpened=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7838,13 +7841,13 @@ You failed and he knows you failed.
             
         if wardrobeUprightCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("WardrobeUpright=False", "WardrobeUpright=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7852,13 +7855,13 @@ You failed and he knows you failed.
             
         if doorOpenedCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("DoorOpened=False", "DoorOpened=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7866,13 +7869,13 @@ You failed and he knows you failed.
             
         if quillMadeCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("QuillMade=False", "QuillMade=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7880,13 +7883,13 @@ You failed and he knows you failed.
             
         if mapMadeCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("MapMade=False", "MapMade=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7894,13 +7897,13 @@ You failed and he knows you failed.
             
         if rugMovedCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("RugMoved=False", "RugMoved=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7908,13 +7911,13 @@ You failed and he knows you failed.
             
         if hatchOpenedCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("HatchOpened=False", "HatchOpened=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7922,13 +7925,13 @@ You failed and he knows you failed.
             
         if bodyFlippedCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("BodyFlipped=False", "BodyFlipped=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7936,13 +7939,13 @@ You failed and he knows you failed.
     
         if bedroomDrawerOpenedCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("BedroomDrawerOpened=False", "BedroomDrawerOpened=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7950,13 +7953,13 @@ You failed and he knows you failed.
             
         if letterOpenedCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("LetterOpened=False", "LetterOpened=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7964,13 +7967,13 @@ You failed and he knows you failed.
             
         if potLookedAtCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("PotLookedAt=False", "PotLookedAt=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7978,13 +7981,13 @@ You failed and he knows you failed.
             
         if grinderTurnedCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("GrinderTurned=False", "GrinderTurned=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -7992,13 +7995,13 @@ You failed and he knows you failed.
             
         if bedroomKillerAliveCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("BedroomKillerAlive=False", "BedroomKillerAlive=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8006,13 +8009,13 @@ You failed and he knows you failed.
             
         if bedroomKillerDeadCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("BedroomKillerDead=False", "BedroomKillerDead=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8020,13 +8023,13 @@ You failed and he knows you failed.
             
         if kitchenKillerAliveCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("KitchenKillerAlive=False", "KitchenKillerAlive=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8034,13 +8037,13 @@ You failed and he knows you failed.
             
         if kitchenKillerDeadCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("KitchenKillerDead=False", "KitchenKillerDead=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8048,13 +8051,13 @@ You failed and he knows you failed.
             
         if livingRoomKillerAliveCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("LivingRoomKillerAlive=False", "LivingRoomKillerAlive=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8062,13 +8065,13 @@ You failed and he knows you failed.
             
         if livingRoomKillerDeadCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("livingRoomKillerDead=False", "livingRoomKillerDead=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8076,13 +8079,13 @@ You failed and he knows you failed.
             
         if bucketMeltedCheck:
 
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("BucketMelted=False", "BucketMelted=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8090,13 +8093,13 @@ You failed and he knows you failed.
             
         if fireOutCheck:
 
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("FireOut=False", "FireOut=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8104,13 +8107,13 @@ You failed and he knows you failed.
             
         if bronzeKeyUsedCheck:
 
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("BronzeKeyUsed=False", "BronzeKeyUsed=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8118,13 +8121,13 @@ You failed and he knows you failed.
             
         if bronzeKeyGotInterCheck:
 
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("BronzeKeyGotInter=False", "BronzeKeyGotInter=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8132,13 +8135,13 @@ You failed and he knows you failed.
             
         if silverKeyUsedCheck:
 
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("SilverKeyUsed=False", "SilverKeyUsed=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8146,13 +8149,13 @@ You failed and he knows you failed.
             
         if silverKeyGotInterCheck:
 
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("SilverKeyGotInter=False", "SilverKeyGotInter=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8160,13 +8163,13 @@ You failed and he knows you failed.
             
         if goldKeyUsedCheck:
 
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("GoldKeyUsed=False", "GoldKeyUsed=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8174,13 +8177,13 @@ You failed and he knows you failed.
             
         if goldKeyGotInterCheck:
 
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("GoldKeyGotInter=False", "GoldKeyGotInter=True")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8196,7 +8199,7 @@ You failed and he knows you failed.
         
         if roomOneCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             mapContent = saveState.read()
             
@@ -8228,7 +8231,7 @@ You failed and he knows you failed.
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8236,7 +8239,7 @@ You failed and he knows you failed.
             
         if roomTwoCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             mapContent = saveState.read()
             
@@ -8268,7 +8271,7 @@ You failed and he knows you failed.
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8276,7 +8279,7 @@ You failed and he knows you failed.
 
         if roomThreeCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             mapContent = saveState.read()
             
@@ -8308,7 +8311,7 @@ You failed and he knows you failed.
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8316,7 +8319,7 @@ You failed and he knows you failed.
         
         if roomFourCheck:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             mapContent = saveState.read()
             
@@ -8348,7 +8351,7 @@ You failed and he knows you failed.
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8356,7 +8359,7 @@ You failed and he knows you failed.
         
         if roomFiveCheck:
         
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             mapContent = saveState.read()
             
@@ -8388,7 +8391,7 @@ You failed and he knows you failed.
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8406,13 +8409,13 @@ You failed and he knows you failed.
         
         if location3Check:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("Location=0", "Location=3")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8420,13 +8423,13 @@ You failed and he knows you failed.
             
         elif location4Check:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("Location=0", "Location=4")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8434,13 +8437,13 @@ You failed and he knows you failed.
             
         elif location5Check:
             
-            saveState = open("SaveState.txt", "rt")
+            saveState = open(saveStateLocation, "rt")
             
             saveContent = saveContent.replace("Location=0", "Location=5")
             
             saveState.close()
             
-            saveState = open("SaveState.txt", "wt")
+            saveState = open(saveStateLocation, "wt")
             
             saveState.write(saveContent)
             
@@ -8836,9 +8839,9 @@ X = You
             
     def load():
         
-        saveState = open("SaveState.txt", "r")
+        saveState = open(saveStateLocation, "r")
         
-        saveSanityState = open("SaveState.txt")
+        saveSanityState = open(saveStateLocation)
     
         saveContent = saveState.read()
         
@@ -9222,7 +9225,7 @@ X = You
             
             interactionSave.append("location5")
     
-    saveState = open("SaveState.txt")
+    saveState = open(saveStateLocation)
     
     saveContent = saveState.read()
     
@@ -9282,7 +9285,7 @@ def options():
                 
                 # ? ------------------------------Saving Red Theme-------------------------------------------------
 
-                saveState = open("SaveState.txt", "rt")
+                saveState = open(saveStateLocation, "rt")
                 
                 saveContent = saveState.read()
                 
@@ -9300,7 +9303,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9312,7 +9315,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9324,7 +9327,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9336,7 +9339,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9363,7 +9366,7 @@ def options():
                 
                 # ? ------------------------------Saving Blue Theme-------------------------------------------------
                 
-                saveState = open("SaveState.txt", "rt")
+                saveState = open(saveStateLocation, "rt")
                 
                 saveContent = saveState.read()
                 
@@ -9381,7 +9384,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9393,7 +9396,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9405,7 +9408,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9417,7 +9420,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9444,7 +9447,7 @@ def options():
                 
                 # ? ------------------------------Saving Green Theme-------------------------------------------------
                 
-                saveState = open("SaveState.txt", "rt")
+                saveState = open(saveStateLocation, "rt")
                 
                 saveContent = saveState.read()
                 
@@ -9462,7 +9465,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9474,7 +9477,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9486,7 +9489,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9498,7 +9501,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9525,7 +9528,7 @@ def options():
                 
                 # ? ------------------------------Saving Yellow Theme-------------------------------------------------
                 
-                saveState = open("SaveState.txt", "rt")
+                saveState = open(saveStateLocation, "rt")
                 
                 saveContent = saveState.read()
                 
@@ -9543,7 +9546,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9555,7 +9558,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9567,7 +9570,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9579,7 +9582,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9606,7 +9609,7 @@ def options():
                 
                 # ? ------------------------------Saving Magenta Theme-------------------------------------------------
                 
-                saveState = open("SaveState.txt", "rt")
+                saveState = open(saveStateLocation, "rt")
                 
                 saveContent = saveState.read()
                 
@@ -9624,7 +9627,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9636,7 +9639,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9648,7 +9651,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9660,7 +9663,7 @@ def options():
                     
                     saveState.close()
                     
-                    saveState = open("SaveState.txt", "wt")
+                    saveState = open(saveStateLocation, "wt")
                     
                     saveState.write(saveContent)
                     
@@ -9747,7 +9750,7 @@ def startMenu():
     
     theme = str(themeArray[0])
     
-    saveState = open("SaveState.txt", "r")
+    saveState = open(saveStateLocation, "r")
     
     saveContent = saveState.read()
     
