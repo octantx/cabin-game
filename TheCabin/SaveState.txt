@@ -1,5 +1,5 @@
 Sanity:
-Sanity=0
+Sanity=1
 
 Inventory:
 
@@ -8,7 +8,7 @@ RustyKeyGot=False
 PristineKeyGot=False
 FeatherGot=False
 PaperGot=False
-QuillGot=False
+QuillGot=True
 MapGot=False
 StarsGot=False
 KnifeGot=False
@@ -24,7 +24,7 @@ Interactions:
 
 BoxOpened=False
 DoorOpened=False
-QuillMade=False
+QuillMade=True
 MapMade=False
 RugMoved=False
 HatchOpened=False
