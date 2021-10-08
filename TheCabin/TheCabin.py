@@ -9249,11 +9249,7 @@ def options():
     optionsInput = str(input(colored("What do you want to do? (Input the number of the selection): ", f"{theme}", attrs=["bold"])))
     
     if optionsInput == "1":
-        
-        def blankspace():
-            
-            blankspace()
-                
+
         blankspace()
         
         def themefunc():
