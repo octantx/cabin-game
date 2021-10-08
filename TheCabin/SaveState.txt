@@ -66,7 +66,7 @@ FourthRoom=False
 FifthRoom=False
 
 Killer Location:
-Location=5
+Location=0
 
 Theme:
 Theme=Red
