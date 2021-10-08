@@ -29,7 +29,8 @@ def blankspace():
     
     for i in range(45):
         print("")
-
+        
+# ? Save location variable so the path can be change (mostly for development purposes)
 saveStateLocation = "TheCabin/SaveState.txt" # ! To be changed to just "SaveState.txt" when packaging
 
 # ? Version number variable is created so I don't have to find every instance of the version being mentioned and change it
