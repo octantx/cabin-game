@@ -1,0 +1,83 @@
+========================================================================================================================
+
+  ▄      ▄   ██▄   ▄███▄   █▄▄▄▄ ▄█▄    █▄▄▄▄ ████▄ ▄████     ▄▄▄▄▀ 
+   █      █  █  █  █▀   ▀  █  ▄▀ █▀ ▀▄  █  ▄▀ █   █ █▀   ▀ ▀▀▀ █    
+█   █ ██   █ █   █ ██▄▄    █▀▀▌  █   ▀  █▀▀▌  █   █ █▀▀        █    
+█   █ █ █  █ █  █  █▄   ▄▀ █  █  █▄  ▄▀ █  █  ▀████ █         █     
+█▄ ▄█ █  █ █ ███▀  ▀███▀     █   ▀███▀    █          █       ▀      
+ ▀▀▀  █   ██                ▀            ▀            ▀             
+
+UNDERCROFT - (blue) dungeon exploration behind bookshelf in first room, hard mode? (more "random" stuff)
+
+Brainstorm:
+
+    Content: Dungeon exploration past the huge bookshelf when you complete a puzzle in the first room
+    Defining feature: A hard mode and new game+ is added which puts items in different places, makes puzzles harder etc
+
+========================================================================================================================
+
+ ▄▀▀▄▀▀▀▄  ▄▀▀█▄▄▄▄  ▄▀▀▀▀▄   ▄▀▀▄ ▄▀▀▄  ▄▀▀█▀▄   ▄▀▀█▄▄▄▄  ▄▀▀▄ ▄▀▄ 
+█   █   █ ▐  ▄▀   ▐ █      █ █   █    █ █   █  █ ▐  ▄▀   ▐ █  █ ▀  █ 
+▐  █▀▀█▀    █▄▄▄▄▄  █      █ ▐  █    █  ▐   █  ▐   █▄▄▄▄▄  ▐  █    █ 
+ ▄▀    █    █    ▌   ▀▄▄▄▄▀▄   █    █       █      █    ▌    █    █  
+█     █    ▄▀▄▄▄▄           █   ▀▄▄▄▄▀   ▄▀▀▀▀▀▄  ▄▀▄▄▄▄   ▄▀   ▄▀   
+
+REQUIEM - (green) aftermath of main game and undercroft, funeral for certain characters, character interaction
+
+Brainstorm:
+
+    Content: Funeral for the police officers and civilians who died by the hands of the constellation killer
+    Defining feature: Character interaction, or the ability to "say" things
+
+========================================================================================================================
+
+ ▄██████▄     ▄███████▄ ███    █▄   ▄█          ▄████████ ███▄▄▄▄    ▄████████    ▄████████ 
+███    ███   ███    ███ ███    ███ ███         ███    ███ ███▀▀▀██▄ ███    ███   ███    ███ 
+███    ███   ███    ███ ███    ███ ███         ███    █▀  ███   ███ ███    █▀    ███    █▀  
+███    ███   ███    ███ ███    ███ ███        ▄███▄▄▄     ███   ███ ███         ▄███▄▄▄     
+███    ███ ▀█████████▀  ███    ███ ███       ▀▀███▀▀▀     ███   ███ ███        ▀▀███▀▀▀     
+███    ███   ███        ███    ███ ███         ███    █▄  ███   ███ ███    █▄    ███    █▄  
+███    ███   ███        ███    ███ ███▌    ▄   ███    ███ ███   ███ ███    ███   ███    ███ 
+ ▀██████▀   ▄████▀      ████████▀  █████▄▄██   ██████████  ▀█   █▀  ████████▀    ██████████ 
+                                                                                           
+OPULENCE - (yellow) resident evil type mansion, 
+
+Brainstorm:
+
+    Content: A resident evil type style mansion where your character actually has to find people instead of hiding and escaping
+    Defining feature: placing traps, killing people etc. It's a strategy type content addition
+
+========================================================================================================================
+
+
+ ██▓███  ▓█████  ███▄    █  █    ██  ███▄ ▄███▓ ▄▄▄▄    ██▀███   ▄▄▄      
+▓██░  ██▒▓█   ▀  ██ ▀█   █  ██  ▓██▒▓██▒▀█▀ ██▒▓█████▄ ▓██ ▒ ██▒▒████▄    
+▓██░ ██▓▒▒███   ▓██  ▀█ ██▒▓██  ▒██░▓██    ▓██░▒██▒ ▄██▓██ ░▄█ ▒▒██  ▀█▄  
+▒██▄█▓▒ ▒▒▓█  ▄ ▓██▒  ▐▌██▒▓▓█  ░██░▒██    ▒██ ▒██░█▀  ▒██▀▀█▄  ░██▄▄▄▄██ 
+▒██▒ ░  ░░▒████▒▒██░   ▓██░▒▒█████▓ ▒██▒   ░██▒░▓█  ▀█▓░██▓ ▒██▒ ▓█   ▓██▒
+▒▓▒░ ░  ░░░ ▒░ ░░ ▒░   ▒ ▒ ░▒▓▒ ▒ ▒ ░ ▒░   ░  ░░▒▓███▀▒░ ▒▓ ░▒▓░ ▒▒   ▓▒█░ 
+░▒ ░      ░ ░  ░░ ░░   ░ ▒░░░▒░ ░ ░ ░  ░      ░▒░▒   ░   ░▒ ░ ▒░  ▒   ▒▒ ░
+░░          ░      ░   ░ ░  ░░░ ░ ░ ░      ░    ░    ░   ░░   ░   ░   ▒   
+            ░  ░         ░    ░            ░    ░         ░           ░  ░
+                                                     ░                                                   
+PENUMBRA - (magenta) prison for the constellation killer
+
+    Content: See what happened to the constellation killer after the base game and undercroft, after he was arrested and sent to north dakota state penitentiary
+    Defining feature: Play as either the constellation killer or corrections officer Lowry, or both (multiplayer), and go through the prison experience
+    
+========================================================================================================================
+
+ █████╗ ██████╗ ██████╗  █████╗ ██████╗  █████╗ ████████╗ █████╗ 
+██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗
+███████║██████╔╝██████╔╝███████║██████╔╝███████║   ██║   ███████║
+██╔══██║██╔═══╝ ██╔═══╝ ██╔══██║██╔══██╗██╔══██║   ██║   ██╔══██║
+██║  ██║██║     ██║     ██║  ██║██║  ██║██║  ██║   ██║   ██║  ██║
+╚═╝  ╚═╝╚═╝     ╚═╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝
+                                                                 
+APPARATA - (black with white background) built in editor for custom content in the cabin
+
+    Content: N/A
+    Defining feature: Users can create content for the cabin with a built in editor, package it, and make an updater for it,
+    where other players can import it into their cabin and play it in a custom content menu.
+
+========================================================================================================================

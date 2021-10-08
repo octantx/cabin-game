@@ -1,0 +1,121 @@
+
+1) When sanity is high, sometimes, opening the inventory will trigger an event where the word "nothing" will repeat over and over.
+
+2) Inputting anything at a high sanity can cause certain things to happen, like large titles to appear to scare the player, etc.
+
+3) Sanity can be slightly reduced by looking at rusty necklace but not forever, you can only do it once within a given amount of time and that time is saved
+
+Sanity is an invisible integer which is increased and decreased through certain actions. Your level of sanity either prevents or allows
+certain delusions which can influence endings, decisions, etc.
+
+Goes up by 1 to signify loss in sanity every certain event, looking at horrific sites will increase the number, such as the kitchen
+
+Universal:
+
+    Using rusty necklace decreases sanity by 2 | R1: DONE, R2:DONE, R3:NOT DONE, R4:NOT DONE
+
+First room:
+
+    Looking at blood raises sanity by 2 | DONE
+
+    Looking at corpse raises sanity by 4 | DONE
+
+    Looking at constellation raises sanity by 1 | DONE
+
+    Creating the quill raises sanity by 1 | DONE
+
+    Creating the map raises sanity by 1 | DONE
+
+    Opening the door raises sanity by 3 | DONE | NEC
+
+    Hearing the scream raises sanity by 2 | DONE | NEC
+
+    Looking out window raises sanity by 2 | DONE
+
+Second room:
+
+    Looking at a door the killer is behind (seeing the blood and meat) raises sanity by 2 | DONE
+
+Third room:
+
+    Picking up pistol raises sanity by 2 | DONE
+
+    Looking at pistol raises sanity by 1 | DONE
+
+    Reading letter decreases sanity by 2 but only once | DONE
+
+Fourth room:
+
+    Picking up knife raises sanity by 2 | DONE
+
+    Looking at pot raises sanity by 3 but only once | DONE
+
+    Looking at pans raises sanity by 2 | DONE
+
+    Looking at grinder raises sanity by 1 | DONE
+
+    Looking at floor raises sanity by 2 | DONE
+
+    Looking out windows raises sanity by 2 | DONE
+
+    Looking at knife raises sanity by 1 | DONE
+
+    Looking at red substance raises sanity by 2 | DONE
+
+    Using the grinder raises sanity by 3 | DONE
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+EVENTS:
+
+Room one:
+
+    Looking at corpse creates a spooky event if insanity is >=9 | DONE
+
+    Looking at constellation creates a spooky event if insanity is >=12 | DONE
+
+    Looking outside the windows creates a spooky event if insanity is >=13 | DONE
+
+Room two:
+
+    Looking at the door the killer is behind creates a spooky event if insanity is >=10 | DONE
+
+Room three:
+
+    Picking up the pistol creates a spooky event if insanity is >=18 | DONE
+
+    Looking at the pistol creates a spooky event if insanity is >=14 | DONE
+
+Room four:
+
+    Picking up the knife creates a spooky event if insanity is >=18 | DONE
+
+    Looking at the knife creates a spooky event if insanity is >=14 | DONE
+
+    Looking at the pot creates a spooky event if insanity is >=16 | DONE
+
+    Looking at the pans creates a spooky event if insanity is >=16 | DONE
+
+    Looking at grinder creates a spooky event if insanity is >=20 | DONE
+
+    Looking outside the windows creates a spooky event if insanity is >=15 | DONE
+
+    Using grinder creates a spooky event if insanity is >= 24 | DONE
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+sancheck = int(sanity[0])
+
+if sancheck >= __:
+
+    print("....")
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Engage frank:
+
+die anyway: <=10
+
+incapacitate: >10 but <18
+
+kill: >=18
