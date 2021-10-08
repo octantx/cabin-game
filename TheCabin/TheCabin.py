@@ -23,6 +23,11 @@
     # * The Cabin | 20/9/21 | version B0.92: Touch ups across functions and kitchen content done
     # * The Cabin | 20/9/21 | version B0.95: Kitchen fully complete and living room ready to be made
     # * The Cabin | 25/9/21 | version F1.00: Full game complete, full release
+    
+def blankspace():
+    
+    for i in range(45):
+        print("")
 
 # ? Version number variable is created so I don't have to find every instance of the version being mentioned and change it
 ver = "v1.00"
@@ -44,9 +49,8 @@ try:
     from termcolor import *
 except:
     
-    for i in range(45):
-        print("")
-    
+    blankspace()
+
     print("""
 Termcolor is not installed, and this game needs it to do all the fancy colouring effects!
 To install termcolor, please close this terminal instance and input \"pip install termcolor\",
@@ -71,7 +75,11 @@ try:
 
 except:
     
+    blankspace()
+    
     print("\"SaveState.txt\" cannot be found, please reinstall the program or ensure that \"SaveState.txt\" is within the same directory as the executable.")
+    
+    print("")
     
     input("")
     
@@ -258,8 +266,7 @@ def game():
         use _____ with _____: Uses an item in your inventory with an item or thing in the world
             """
 
-    for i in range(45):
-        print("")
+    blankspace()
     
     print(colored("""
     ▓█████▄  █    ██  ███▄    █ 
@@ -276,8 +283,7 @@ def game():
     
     time.sleep(0.9)
     
-    for i in range(45):
-        print("")
+    blankspace()
         
     time.sleep(0.6)
     
@@ -296,8 +302,7 @@ def game():
     
     time.sleep(0.9)
     
-    for i in range(45):
-        print("")
+    blankspace()
         
     time.sleep(0.6)
     
@@ -316,8 +321,7 @@ def game():
     
     time.sleep(2)
     
-    for i in range(45):
-        print("")
+    blankspace()
         
     time.sleep(0.25)
     
@@ -482,8 +486,7 @@ You move closer to the left door, stepping on the mixture of food and blood whil
         print(heIsThere)
         time.sleep(0.5)
         
-        for i in range(45):
-            print("")
+        blankspace()
             
         if knifeCheck or pistolCheck:
             
@@ -535,8 +538,7 @@ You move closer to the right door, stepping on the mixture of food and blood whi
         print(heIsThere)
         time.sleep(0.5)
         
-        for i in range(45):
-            print("")
+        blankspace()
         
         if knifeCheck or pistolCheck:
             
@@ -588,8 +590,7 @@ You move closer to the middle door, stepping on the mixture of food and blood wh
         print(heIsThere)
         time.sleep(0.5)
         
-        for i in range(45):
-            print("")
+        blankspace()
         
         if knifeCheck or pistolCheck:
             
@@ -688,9 +689,7 @@ You move closer to the middle door, stepping on the mixture of food and blood wh
             
         elif userInput == "clear":
             
-            for i in range(45):
-                
-                print("")
+            blankspace()
                 
             roomOne()
             
@@ -1053,8 +1052,7 @@ you can't seem to remember anything, and you feel woozy, as if drunk.
                     
                     else:
                     
-                        for i in range(45):
-                            print("")
+                        blankspace()
                         
                         bodyEvent = """
         Help me Help me Help me Help me Help me Help me Help me Help me Help me Help me Help me Help me Help me Help me Help me 
@@ -1074,8 +1072,7 @@ you can't seem to remember anything, and you feel woozy, as if drunk.
                         print(bodyEvent)
                         time.sleep(0.3)
                         
-                        for i in range(45):
-                            print("") 
+                        blankspace() 
                         
                         sanityevents.append("bodyEvent")
                 
@@ -1141,8 +1138,7 @@ and a police uniform. It looks like he was strangled and recently, he's still wa
                         
                         else:
                     
-                            for i in range(45):
-                                print("")
+                            blankspace()
                                 
                             constellationEvent = """
         ✦ 　　　　　　　         　        　　　　 　　 　　　　　　　 　　　　　.　　　　　　　　　　　　　　　　　　.　　　 　　　˚　　　　　　　　　　　　　　    　　
@@ -1172,8 +1168,7 @@ and a police uniform. It looks like he was strangled and recently, he's still wa
                             
                             sanityevents.append("constellationEvent")
                             
-                            for i in range(45):
-                                print("")
+                            blankspace()
                     
                     print("""
   *---* 
@@ -2358,9 +2353,7 @@ and a missing group of policemen.
             
         elif userInput == "clear":
             
-            for i in range(45):
-                
-                print("")
+            blankspace()
                 
             roomTwo()
             
@@ -3165,9 +3158,7 @@ it's still in front of the door, but now might be easier to move with another to
             
         elif userInput == "clear":
             
-            for i in range(45):
-                
-                print("")
+            blankspace()
                 
             roomThree()
             
@@ -3295,25 +3286,21 @@ it's still in front of the door, but now might be easier to move with another to
 ░  ░    ░      ░  ░    ░  ░
                             """, f"{theme}", attrs=["bold"])
                         
-                            for i in range(45):
-                                print("")
+                            blankspace()
                                 
                             time.sleep(2)
                             
                             print(pickUpPistolEvent)
                             time.sleep(0.3)
-                            for i in range(45):
-                                print("")
+                            blankspace()
                             time.sleep(0.6)
                             print(pickUpPistolEvent)
                             time.sleep(0.3)
-                            for i in range(45):
-                                print("")
+                            blankspace()
                             time.sleep(0.6)
                             print(pickUpPistolEvent)
                             time.sleep(0.3)
-                            for i in range(45):
-                                print("")
+                            blankspace()
                                 
                             sanityevents.append("pickUpPistolEvent")
                     
@@ -3657,8 +3644,7 @@ On top of the drawers is a picture frame and a sealed letter.
                         
                         else:
                         
-                            for i in range(45):
-                                print("")
+                            blankspace()
                                 
                             time.sleep(2.3)
                             
@@ -3683,8 +3669,7 @@ On top of the drawers is a picture frame and a sealed letter.
                             
                             time.sleep(2)
                             
-                            for i in range(45):
-                                print("")
+                            blankspace()
                             
                             sanityevents.append("pistolLookEvent")
                     
@@ -4218,9 +4203,7 @@ Nancy\"
             
         elif userInput == "clear":
             
-            for i in range(45):
-                
-                print("")
+            blankspace()
                 
             roomFour()
             
@@ -4346,25 +4329,21 @@ Nancy\"
 ░  ░    ░      ░  ░    ░  ░
                             """, f"{theme}", attrs=["bold"])
                         
-                            for i in range(45):
-                                print("")
+                            blankspace()
                                 
                             time.sleep(2)
                             
                             print(pickUpKnifeEvent)
                             time.sleep(0.3)
-                            for i in range(45):
-                                print("")
+                            blankspace()
                             time.sleep(0.6)
                             print(pickUpKnifeEvent)
                             time.sleep(0.3)
-                            for i in range(45):
-                                print("")
+                            blankspace()
                             time.sleep(0.6)
                             print(pickUpKnifeEvent)
                             time.sleep(0.3)
-                            for i in range(45):
-                                print("")
+                            blankspace()
                                 
                             sanityevents.append("pickUpKnifeEvent")
                     
@@ -4737,8 +4716,7 @@ you can't seem to remember anything, and you feel woozy, as if drunk.
                         
                         else:
                         
-                            for i in range(45):
-                                print("")
+                            blankspace()
                                 
                             time.sleep(2.3)
                             
@@ -4763,8 +4741,7 @@ you can't seem to remember anything, and you feel woozy, as if drunk.
                             
                             time.sleep(2)
                             
-                            for i in range(45):
-                                print("")
+                            blankspace()
                             
                             sanityevents.append("knifeLookEvent")
                 
@@ -4818,8 +4795,7 @@ you can't seem to remember anything, and you feel woozy, as if drunk.
                     
                     elif potLookedAtCheck:
                     
-                        for i in range(45):
-                            print("")
+                        blankspace()
                             
                         time.sleep(3)
                         
@@ -4833,33 +4809,27 @@ you can't seem to remember anything, and you feel woozy, as if drunk.
                         
                         time.sleep(1.5)
 
-                        for i in range(45):
-                            print("")
+                        blankspace()
                             
                         print(eyeAscii)
                         time.sleep(0.1)
-                        for i in range(45):
-                            print("")
+                        blankspace()
                         time.sleep(0.1)
                         print(eyeAscii)
                         time.sleep(0.1)
-                        for i in range(45):
-                            print("")
+                        blankspace()
                         time.sleep(0.1)
                         print(eyeAscii)
                         time.sleep(0.1)
-                        for i in range(45):
-                            print("")
+                        blankspace()
                         time.sleep(0.1)
                         print(eyeAscii)
                         time.sleep(0.1)
-                        for i in range(45):
-                            print("")
+                        blankspace()
                         time.sleep(0.1)
                         print(eyeAscii)
                         time.sleep(0.1)
-                        for i in range(45):
-                            print("")
+                        blankspace()
                         
                         print("You failed")
                         
@@ -4867,8 +4837,7 @@ you can't seem to remember anything, and you feel woozy, as if drunk.
                         
                         time.sleep(3)
                         
-                        for i in range(45):
-                            print("")
+                        blankspace()
                             
                         sanityevents.append("lookAtPotsEvent")
                         
@@ -4944,8 +4913,7 @@ An eye.
                     ░░░░░░░░░░░░░░░░░░░░  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  ░░                    ░░  ░░     
                     """, f"{theme}", attrs=["bold"])
                     
-                    for i in range(45):
-                        print("")
+                    blankspace()
                     
                     print(bloodAscii)
                     
@@ -4955,8 +4923,7 @@ An eye.
                     
                     time.sleep(3)
                     
-                    for i in range(45):
-                        print("")
+                    blankspace()
                         
                     print("You wish to cease")
                     
@@ -4964,8 +4931,7 @@ An eye.
                     
                     time.sleep(3)
                     
-                    for i in range(45):
-                        print("")
+                    blankspace()
                         
                     sanityevents.append("lookAtPansEvent")
                     
@@ -5424,8 +5390,7 @@ obscures the group and they disappear without a trace. They remind you of people
  ░                          
                         """, f"{theme}", attrs=["bold"])
                     
-                        for i in range(45):
-                            print("")
+                        blankspace()
                             
                         time.sleep(10)
                         
@@ -5435,8 +5400,7 @@ obscures the group and they disappear without a trace. They remind you of people
                         
                         time.sleep(0.4)
                         
-                        for i in range(45):
-                            print("")
+                        blankspace()
                             
                         time.sleep(0.2)
                         
@@ -5446,8 +5410,7 @@ obscures the group and they disappear without a trace. They remind you of people
                         
                         time.sleep(2.8)
                         
-                        for i in range(45):
-                            print("")
+                        blankspace()
                             
                         time.sleep(0.2)
                         
@@ -5457,8 +5420,7 @@ obscures the group and they disappear without a trace. They remind you of people
                         
                         time.sleep(0.4)
                         
-                        for i in range(45):
-                            print("")
+                        blankspace()
                             
                         time.sleep(0.2)
                         
@@ -5468,8 +5430,7 @@ obscures the group and they disappear without a trace. They remind you of people
                         
                         time.sleep(2.8)
                         
-                        for i in range(45):
-                            print("")
+                        blankspace()
                             
                         time.sleep(0.2)
                         
@@ -5479,8 +5440,7 @@ obscures the group and they disappear without a trace. They remind you of people
                         
                         time.sleep(0.4)
                         
-                        for i in range(45):
-                            print("")
+                        blankspace()
                             
                         time.sleep(0.2)
                         
@@ -5490,8 +5450,7 @@ obscures the group and they disappear without a trace. They remind you of people
                         
                         time.sleep(2.8)
                         
-                        for i in range(45):
-                            print("")
+                        blankspace()
                             
                         time.sleep(0.2)
                         
@@ -5501,8 +5460,7 @@ obscures the group and they disappear without a trace. They remind you of people
                         
                         time.sleep(0.4)
                         
-                        for i in range(45):
-                            print("")
+                        blankspace()
                             
                         time.sleep(0.2)
                         
@@ -5512,8 +5470,7 @@ obscures the group and they disappear without a trace. They remind you of people
                         
                         time.sleep(2.8)
                         
-                        for i in range(45):
-                            print("")
+                        blankspace()
                             
                         sanityevents.append("useGrinderEvent")
                     
@@ -5663,9 +5620,7 @@ Opening the fridge inwards reveals an incredible amount of \"SPAM\" cans which c
             
         elif userInput == "clear":
             
-            for i in range(45):
-                
-                print("")
+            blankspace()
                 
             roomFive()
             
@@ -6125,8 +6080,7 @@ however the fire is to hot to examine further. There is also a smoldering piece 
             
             if goToFinalDoor and goToDoor or goToDoor:
                 
-                for i in range(45):
-                    print("")
+                blankspace()
                     
                 time.sleep(2)
                     
@@ -6136,8 +6090,7 @@ however the fire is to hot to examine further. There is also a smoldering piece 
                 
                 time.sleep(4)
                 
-                for i in range(45):
-                    print("")
+                blankspace()
                 
                 print(colored("You're out", attrs=["bold"]))
                 
@@ -6145,8 +6098,7 @@ however the fire is to hot to examine further. There is also a smoldering piece 
                 
                 time.sleep(4)
                 
-                for i in range(45):
-                    print("")
+                blankspace()
                     
                 print(colored("You realise there is no happy ending", attrs=["bold"]))
                 
@@ -6154,8 +6106,7 @@ however the fire is to hot to examine further. There is also a smoldering piece 
                 
                 time.sleep(4)
                 
-                for i in range(45):
-                    print("")
+                blankspace()
                     
                 print(colored("You don't leave something like that and smell the flowers the next day", attrs=["bold"]))
                 
@@ -6163,8 +6114,7 @@ however the fire is to hot to examine further. There is also a smoldering piece 
                 
                 time.sleep(4)
                 
-                for i in range(45):
-                    print("")
+                blankspace()
                     
                 print(colored("In the end, waking up was your biggest mistake.", attrs=["bold"]))
                 
@@ -6172,8 +6122,7 @@ however the fire is to hot to examine further. There is also a smoldering piece 
                 
                 time.sleep(4)
                 
-                for i in range(45):
-                    print("")
+                blankspace()
                 
                 print(colored("Until next time,", attrs=["bold"]))
                 
@@ -6181,8 +6130,7 @@ however the fire is to hot to examine further. There is also a smoldering piece 
                 
                 time.sleep(4)
                 
-                for i in range(45):
-                    print("")
+                blankspace()
                     
                 print(colored("Mike", f"{theme}", attrs=["bold"]))
                 
@@ -7084,8 +7032,7 @@ You failed and he knows you failed.
         
         if pistolCheck:
             
-            for i in range(45):
-                print("")
+            blankspace()
                 
             time.sleep(4)
             
@@ -7095,8 +7042,7 @@ You failed and he knows you failed.
             
             time.sleep(6)
             
-            for i in range(45):
-                print("")
+            blankspace()
                 
             print(colored("After one long, loud scream, a thud is heard.", attrs=["bold"]))
             
@@ -7104,8 +7050,7 @@ You failed and he knows you failed.
             
             time.sleep(4)
             
-            for i in range(45):
-                print("")
+            blankspace()
                 
             print(colored("He's dropped to the floor", attrs=["bold"]))
             
@@ -7113,8 +7058,7 @@ You failed and he knows you failed.
             
             time.sleep(4)
             
-            for i in range(45):
-                print("")
+            blankspace()
                 
             print(colored("He isn't dead", attrs=["bold"]))
             
@@ -7122,8 +7066,7 @@ You failed and he knows you failed.
             
             time.sleep(4)
             
-            for i in range(45):
-                print("")
+            blankspace()
                 
             time.sleep(6)
             
@@ -7133,8 +7076,7 @@ You failed and he knows you failed.
                 
                 if finishOffInp == "Y":
                     
-                    for i in range(45):
-                        print("")
+                    blankspace()
                         
                     time.sleep(4)
                     
@@ -7144,8 +7086,7 @@ You failed and he knows you failed.
                     
                     time.sleep(4)
                     
-                    for i in range(45):
-                        print("")
+                    blankspace()
                         
                     time.sleep(4)
                     
@@ -7163,8 +7104,7 @@ You failed and he knows you failed.
                     
                     time.sleep(4)
                     
-                    for i in range(45):
-                        print("")
+                    blankspace()
                         
                     if mapState3Check:
                         
@@ -7198,8 +7138,7 @@ You failed and he knows you failed.
                     
                 elif finishOffInp == "N":
                     
-                    for i in range(45):
-                        print("")
+                    blankspace()
                         
                     print(colored("You leave him there, writhing in pain on the ground, and try to save yourself.", attrs=["bold"]))
                     
@@ -7215,8 +7154,7 @@ You failed and he knows you failed.
                     
                     time.sleep(6)
                     
-                    for i in range(45):
-                        print("")
+                    blankspace()
                         
                     if mapState3Check:
                         
@@ -7264,8 +7202,7 @@ You failed and he knows you failed.
                                 
         if knifeCheck:
             
-            for i in range(45):
-                print("")
+            blankspace()
                 
             time.sleep(4)
             
@@ -7275,8 +7212,7 @@ You failed and he knows you failed.
             
             time.sleep(4)
             
-            for i in range(45):
-                print("")
+            blankspace()
                 
             print(colored("After one long, loud scream, a thud is heard.", attrs=["bold"]))
             
@@ -7284,8 +7220,7 @@ You failed and he knows you failed.
             
             time.sleep(4)
             
-            for i in range(45):
-                print("")
+            blankspace()
                 
             print(colored("He's dropped to the floor", attrs=["bold"]))
             
@@ -7293,8 +7228,7 @@ You failed and he knows you failed.
             
             time.sleep(4)
             
-            for i in range(45):
-                print("")
+            blankspace()
                 
             print(colored("He isn't dead", attrs=["bold"]))
             
@@ -7302,8 +7236,7 @@ You failed and he knows you failed.
             
             time.sleep(4)
             
-            for i in range(45):
-                print("")
+            blankspace()
                 
             time.sleep(6)
             
@@ -7313,8 +7246,7 @@ You failed and he knows you failed.
                 
                 if finishOffInp == "Y":
                     
-                    for i in range(45):
-                        print("")
+                    blankspace()
                         
                     time.sleep(4)
                     
@@ -7324,8 +7256,7 @@ You failed and he knows you failed.
                     
                     time.sleep(4)
                     
-                    for i in range(45):
-                        print("")
+                    blankspace()
                         
                     time.sleep(4)
                     
@@ -7343,8 +7274,7 @@ You failed and he knows you failed.
                     
                     time.sleep(6)
                     
-                    for i in range(45):
-                        print("")
+                    blankspace()
                         
                     if mapState3Check:
                         
@@ -7378,8 +7308,7 @@ You failed and he knows you failed.
                     
                 elif finishOffInp == "N":
                     
-                    for i in range(45):
-                        print("")
+                    blankspace()
                         
                     print(colored("You leave him there, writhing in pain on the ground, and try to save yourself.", attrs=["bold"]))
                     
@@ -7395,8 +7324,7 @@ You failed and he knows you failed.
                     
                     time.sleep(6)
                     
-                    for i in range(45):
-                        print("")
+                    blankspace()
                         
                     if mapState3Check:
                         
@@ -9311,8 +9239,7 @@ def options():
     
     theme = str(themeArray[0])
     
-    for i in range(45):
-        print("")
+    blankspace()
     
     print(colored("""
     1) Theme
@@ -9325,8 +9252,7 @@ def options():
         
         def blankspace():
             
-            for i in range(45):
-                print("")
+            blankspace()
                 
         blankspace()
         
@@ -9764,8 +9690,7 @@ def options():
                 
                 time.sleep(1)
                 
-                for i in range(45):
-                    print("")
+                blankspace()
                 
                 themefunc()
                 
@@ -9785,8 +9710,7 @@ def options():
         
         time.sleep(1)
         
-        for i in range(45):
-            print("")
+        blankspace()
         
         options()
         
@@ -9794,8 +9718,7 @@ def options():
 def credits():
     
     # ? Print a series of blank space to clear away previous results
-    for i in range(45):
-        print("")
+    blankspace()
         
     # ? Print the credits series of text
     print(colored(f"""
@@ -9837,8 +9760,7 @@ def startMenu():
     continueCheck = re.search("True", saveContent)
     
     # ? Print a series of whitespace in the terminal to rid of previous tests (mainly for testing)
-    for i in range(45):
-        print("")
+    blankspace()
     
     # ? Print the title and subtitle of the game in a cool ascii font with red colouring
     print(colored(f"""
@@ -9891,8 +9813,7 @@ def startMenu():
                 
         elif startInp == "telltale":
             
-            for i in range(45):
-                print("")
+            blankspace()
             
             print(colored("""
                 
@@ -9918,8 +9839,7 @@ def startMenu():
         
         elif startInp == "john bongos":
             
-            for i in range(45):
-                print("")
+            blankspace()
             
             print("*tim allen face*")
             
@@ -9982,9 +9902,7 @@ def startMenu():
             
         elif startInp == "telltale":
             
-            for i in range(45):
-                
-                print("")
+            blankspace()
             
             print(colored("""
                 
@@ -10010,8 +9928,7 @@ def startMenu():
             
         elif startInp == "john bongos":
             
-            for i in range(45):
-                print("")
+            blankspace()
             
             print("*tim allen face*")
             
