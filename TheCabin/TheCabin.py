@@ -1814,6 +1814,14 @@ You see a bigger, pristine key in the box, while taking your rusty key out of th
                     
                     print("")
                     
+                    findPaper = inventory.index("paper")
+                    
+                    inventory.pop(findPaper)
+                    
+                    findQuill = inventory.index("quill")
+                    
+                    inventory.pop(findQuill)
+                    
                     inventory.append("map")
                     
                     mapState.clear()
@@ -9029,8 +9037,32 @@ X = You
             
         if mapGotCheck:
             
-            inventory.append("map")
+            try:
+            
+                findPaper = inventory.index("paper")  # ? step one
+                
+                print(f"paper index: {findPaper}")
+                
+                print(inventory)
+                
+                inventory.pop(findPaper) # ? step two
+                
+                print(inventory)
         
+                findQuill = inventory.index("quill") # ? step three
+                
+                print(f"quill index: {findQuill}")
+                
+                print(inventory)
+                
+                inventory.pop(findQuill) # ? step four
+                
+                print(inventory)
+                
+            except:
+            
+                inventory.append("map") # ? step five
+            
         if knifeGotCheck:
             
             interactionSave.append("knifeGot")
