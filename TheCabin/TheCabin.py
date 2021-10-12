@@ -1,5 +1,5 @@
 
-# ? UPDATE LOG: (Current release: BETA | A=Alpha, B=Beta, F=Full)
+# ? UPDATE LOG: (Current release: FULL | A=Alpha, B=Beta, F=Full)
 # ? Major mechanic added = +0.1 
 # ? Minor mechanic added = +0.05   
 # ? Content added        = +0.03  
@@ -22,13 +22,12 @@
     # * The Cabin | 15/9/21 | version B0.89: Revised dialogue
     # * The Cabin | 20/9/21 | version B0.92: Touch ups across functions and kitchen content done
     # * The Cabin | 20/9/21 | version B0.95: Kitchen fully complete and living room ready to be made
-    # * The Cabin | 25/9/21 | version F1.00: Full game complete, full release
+    # * The Cabin | 25/9/21 | version F1.00: Full game complete, full release, however, unpolished
+    # * The Cabin | ??/?/21 | version F1.??: Tribulative Moniker
     
 # ? Blankspace function is created to clear up the terminal periodically
 def blankspace():
-    
-    for i in range(45):
-        print("")
+    for i in range(45): print("")
         
 # ? Save location variable so the path can be change (mostly for development purposes)
 saveStateLocation = "TheCabin/SaveState.txt" # ! To be changed to just "SaveState.txt" when packaging
@@ -2852,7 +2851,7 @@ The portion of the floor in the hallway that isn't covered by a similar red rug 
                         
                         mapState.append("5")
                     
-                        roomFour()
+                        roomFive()
                     
                     elif starLocation5Check:
                         
@@ -2903,7 +2902,7 @@ The portion of the floor in the hallway that isn't covered by a similar red rug 
                     
                     print("")
                     
-                    roomOne()
+                    roomTwo()
             
             else:
                 
@@ -6833,6 +6832,12 @@ You get up high and manage to take the paining off the wall, placing it to the s
                 
                 safeOpenedCheck = re.search("safeOpened", interactionSaveUseable)
                 
+                print("")
+                        
+                print(colored("You approach the safe", attrs=["bold"]))
+                
+                print("")
+                
                 def safeUse():
                     
                     if safeOpenedCheck:
@@ -6847,9 +6852,7 @@ You get up high and manage to take the paining off the wall, placing it to the s
                         
                     else:
                         
-                        print("")
-                        
-                        safeCombo = input("You approach the safe, what's the passcode? (type \"0\" to leave at anytime): ")
+                        safeCombo = input(colored("What's the passcode? (type \"0\" to leave at anytime): ", f"{theme}", attrs=["bold"]))
                         
                         if safeCombo == "3753":
                             
@@ -6867,7 +6870,7 @@ You get up high and manage to take the paining off the wall, placing it to the s
                             
                             print("")
                             
-                            print("You don't know the code at this current time, and decide to keep searching.")
+                            print(colored("You don't know the code at this current time, and decide to keep searching.", attrs=["bold"]))
                             
                             print("")
                             
@@ -6877,10 +6880,10 @@ You get up high and manage to take the paining off the wall, placing it to the s
                             
                             print("")
                             
-                            print(f"You input {safeCombo} but nothing happens, the safe asks for the code again.")
+                            print(colored(f"You input {safeCombo} but nothing happens, the safe asks for the code again.", attrs=["bold"]))
                             
                             print("")
-                            
+                        
                             safeUse()
         
                 safeUse()
@@ -8206,6 +8209,12 @@ You failed and he knows you failed.
         roomFourCheck = re.search("4", mapStateUseable)
         roomFiveCheck = re.search("5", mapStateUseable)
         
+        firstBeenCheck = re.search("firstBeen", interactionSaveUseable)
+        secondBeenCheck = re.search("secondBeen", interactionSaveUseable)
+        thirdBeenCheck = re.search("thirdBeen", interactionSaveUseable)
+        fourthBeenCheck = re.search("fourthBeen", interactionSaveUseable)
+        fifthBeenCheck = re.search("fifthBeen", interactionSaveUseable)
+        
         if roomOneCheck:
             
             saveState = open(saveStateLocation, "rt")
@@ -8405,6 +8414,77 @@ You failed and he knows you failed.
             saveState.write(saveContent)
             
             saveState.close()
+            
+        if firstBeenCheck:
+            
+            saveState = open(saveStateLocation, "rt")
+            
+            saveContent = saveContent.replace("FirstBeen=False", "FirstBeen=True")
+            
+            saveState.close()
+            
+            saveState = open(saveStateLocation, "wt")
+            
+            saveState.write(saveContent)
+            
+            saveState.close()
+
+        if secondBeenCheck:
+            
+            saveState = open(saveStateLocation, "rt")
+            
+            saveContent = saveContent.replace("SecondBeen=False", "SecondBeen=True")
+            
+            saveState.close()
+            
+            saveState = open(saveStateLocation, "wt")
+            
+            saveState.write(saveContent)
+            
+            saveState.close()
+            
+        if thirdBeenCheck:
+            
+            saveState = open(saveStateLocation, "rt")
+            
+            saveContent = saveContent.replace("ThirdBeen=False", "ThirdBeen=True")
+            
+            saveState.close()
+            
+            saveState = open(saveStateLocation, "wt")
+            
+            saveState.write(saveContent)
+            
+            saveState.close()
+            
+        if fourthBeenCheck:
+            
+            saveState = open(saveStateLocation, "rt")
+            
+            saveContent = saveContent.replace("FourthBeen=False", "FourthBeen=True")
+            
+            saveState.close()
+            
+            saveState = open(saveStateLocation, "wt")
+            
+            saveState.write(saveContent)
+            
+            saveState.close()
+            
+        if fifthBeenCheck:
+            
+            saveState = open(saveStateLocation, "rt")
+            
+            saveContent = saveContent.replace("FifthBeen=False", "FifthBeen=True")
+            
+            saveState.close()
+            
+            saveState = open(saveStateLocation, "wt")
+            
+            saveState.write(saveContent)
+            
+            saveState.close()
+            
             
         # ? LOCATION CHECK --------------------------------------------------------------------------------
         
@@ -8866,6 +8946,8 @@ X = You
         
         sanity.append(sanfind)
         
+        # ? INVENTORY CHECKS ---------------------------------------------------------------------------------------------------------------
+        
         rustyNecklaceGotCheck = re.search("RustyNecklaceGot=True", saveContent)
 
         rustyKeyGotCheck = re.search("RustyKeyGot=True", saveContent)
@@ -8895,118 +8977,6 @@ X = You
         silverKeyGotCheck = re.search("SilverKeyGot=True", saveContent)
         
         goldKeyGotCheck = re.search("GoldKeyGot=True", saveContent)
-        
-        boxOpenedCheck = re.search("BoxOpened=True", saveContent)
-
-        doorOpenedCheck = re.search("DoorOpened=True", saveContent)
-        
-        quillMadeCheck = re.search("QuillMade=True", saveContent)
-        
-        mapMadeCheck = re.search("MapMade=True", saveContent)
-        
-        rugMovedCheck = re.search("RugMoved=True", saveContent)
-        
-        hatchOpenedCheck = re.search("HatchOpened=True", saveContent)
-        
-        bodyFlippedCheck = re.search("BodyFlipped=True", saveContent)
-        
-        bedroomDrawerOpenedCheck = re.search("BedroomDrawerOpened=True", saveContent)
-        
-        letterOpenedCheck = re.search("LetterOpened=True", saveContent)
-        
-        potLookedAtCheck = re.search("PotLookedAt=True", saveContent)
-        
-        grinderTurnedCheck = re.search("GrinderTurned=True", saveContent)
-        
-        bedroomKillerAliveCheck = re.search("BedroomKillerAlive=True", saveContent)
-        
-        bedroomKillerDeadCheck = re.search("BedroomKillerDead=True", saveContent)
-        
-        kitchenKillerAliveCheck = re.search("KitchenKillerAlive=True", saveContent)
-        
-        kitchenKillerDeadCheck = re.search("KitchenKillerDead=True", saveContent)
-        
-        livingRoomKillerAliveCheck = re.search("LivingRoomKillerAlive=True", saveContent)
-        
-        livingRoomKillerDeadCheck = re.search("LivingRoomKillerDead=True", saveContent)
-        
-        wardrobeUprightCheck = re.search("WardrobeUpright=True", saveContent)
-        
-        handTrolleyDroppedOffCheck = re.search("HandTrolleyDroppedOff=True", saveContent)
-        
-        wardrobeMovedTrolleyCheck = re.search("WardrobeMovedTrolley=True", saveContent)
-        
-        bucketMeltedCheck = re.search("BucketMelted=True", saveContent)
-        
-        fireOutCheck = re.search("FireOut=True", saveContent)
-        
-        panelOpenedCheck = re.search("PanelOpened=True", saveContent)
-        
-        bronzeKeyUsedCheck = re.search("BronzeKeyUsed=True", saveContent)
-        
-        bronzeKeyGotInterCheck = re.search("BronzeKeyGotInter=True", saveContent)
-        
-        silverKeyUsedCheck = re.search("SilverKeyUsed=True", saveContent)
-        
-        silverKeyGotInterCheck = re.search("SilverKeyGotInter=True", saveContent)
-        
-        goldKeyUsedCheck = re.search("GoldKeyUsed=True", saveContent)
-        
-        goldKeyGotInterCheck = re.search("GoldKeyGotInter=True", saveContent)
-        
-        paintingMovedCheck = re.search("PaintingMoved=True", saveContent)
-        
-        safeOpenedCheck = re.search("SafeOpened=True", saveContent)
-        
-        goldKeyRugMovedCheck = re.search(r"\bGoldKeyRugMoved=True\b", saveContent)
-        
-        goldHatchOpenedCheck = re.search(r"\bGoldHatchOpened=True\b", saveContent)
-        
-        finalDoorOpenedCheck = re.search(r"\bFinalDoorOpened=True\b", saveContent)
-        
-        roomOneCheck = re.search("FirstRoom=True", saveContent)
-        
-        roomTwoCheck = re.search("SecondRoom=True", saveContent)
-        
-        roomThreeCheck = re.search("ThirdRoom=True", saveContent)
-        
-        roomFourCheck = re.search("FourthRoom=True", saveContent)
-        
-        roomFiveCheck = re.search("FifthRoom=True", saveContent)
-        
-        location3Check = re.search("Location=3", saveContent)
-        
-        location4Check = re.search("Location=4", saveContent)
-        
-        location5Check = re.search("Location=5", saveContent)
-        
-        if paintingMovedCheck:
-            
-            interactionSave.append("paintingMoved")
-            
-        if goldKeyRugMovedCheck:
-            
-            interactionSave.append("goldKeyRugMoved")
-        
-        if goldHatchOpenedCheck:
-            
-            interactionSave.append("goldHatchOpened")
-        
-        if finalDoorOpenedCheck:
-            
-            interactionSave.append("finalDoorOpened")
-            
-        if safeOpenedCheck:
-            
-            interactionSave.append("safeOpened")
-        
-        if wardrobeMovedTrolleyCheck:
-        
-            interactionSave.append("wardrobeMovedTrolley")
-            
-        if panelOpenedCheck:
-            
-            interactionSave.append("panelOpened")
             
         if rustyNecklaceGotCheck:
             
@@ -9096,7 +9066,105 @@ X = You
         
         if goldKeyGotCheck:
             
-            inventory.append("gold key")    
+            inventory.append("gold key")   
+            
+        # ? INTERACTION CHECKS -------------------------------------------------------------------------------------------------------------
+        
+        boxOpenedCheck = re.search("BoxOpened=True", saveContent)
+
+        doorOpenedCheck = re.search("DoorOpened=True", saveContent)
+        
+        quillMadeCheck = re.search("QuillMade=True", saveContent)
+        
+        mapMadeCheck = re.search("MapMade=True", saveContent)
+        
+        rugMovedCheck = re.search("RugMoved=True", saveContent)
+        
+        hatchOpenedCheck = re.search("HatchOpened=True", saveContent)
+        
+        bodyFlippedCheck = re.search("BodyFlipped=True", saveContent)
+        
+        bedroomDrawerOpenedCheck = re.search("BedroomDrawerOpened=True", saveContent)
+        
+        letterOpenedCheck = re.search("LetterOpened=True", saveContent)
+        
+        potLookedAtCheck = re.search("PotLookedAt=True", saveContent)
+        
+        grinderTurnedCheck = re.search("GrinderTurned=True", saveContent)
+        
+        bedroomKillerAliveCheck = re.search("BedroomKillerAlive=True", saveContent)
+        
+        bedroomKillerDeadCheck = re.search("BedroomKillerDead=True", saveContent)
+        
+        kitchenKillerAliveCheck = re.search("KitchenKillerAlive=True", saveContent)
+        
+        kitchenKillerDeadCheck = re.search("KitchenKillerDead=True", saveContent)
+        
+        livingRoomKillerAliveCheck = re.search("LivingRoomKillerAlive=True", saveContent)
+        
+        livingRoomKillerDeadCheck = re.search("LivingRoomKillerDead=True", saveContent)
+        
+        wardrobeUprightCheck = re.search("WardrobeUpright=True", saveContent)
+        
+        handTrolleyDroppedOffCheck = re.search("HandTrolleyDroppedOff=True", saveContent)
+        
+        wardrobeMovedTrolleyCheck = re.search("WardrobeMovedTrolley=True", saveContent)
+        
+        bucketMeltedCheck = re.search("BucketMelted=True", saveContent)
+        
+        fireOutCheck = re.search("FireOut=True", saveContent)
+        
+        panelOpenedCheck = re.search("PanelOpened=True", saveContent)
+        
+        bronzeKeyUsedCheck = re.search("BronzeKeyUsed=True", saveContent)
+        
+        bronzeKeyGotInterCheck = re.search("BronzeKeyGotInter=True", saveContent)
+        
+        silverKeyUsedCheck = re.search("SilverKeyUsed=True", saveContent)
+        
+        silverKeyGotInterCheck = re.search("SilverKeyGotInter=True", saveContent)
+        
+        goldKeyUsedCheck = re.search("GoldKeyUsed=True", saveContent)
+        
+        goldKeyGotInterCheck = re.search("GoldKeyGotInter=True", saveContent)
+        
+        paintingMovedCheck = re.search("PaintingMoved=True", saveContent)
+        
+        safeOpenedCheck = re.search("SafeOpened=True", saveContent)
+        
+        goldKeyRugMovedCheck = re.search(r"\bGoldKeyRugMoved=True\b", saveContent)
+        
+        goldHatchOpenedCheck = re.search(r"\bGoldHatchOpened=True\b", saveContent)
+        
+        finalDoorOpenedCheck = re.search(r"\bFinalDoorOpened=True\b", saveContent)
+        
+        if paintingMovedCheck:
+            
+            interactionSave.append("paintingMoved")
+            
+        if goldKeyRugMovedCheck:
+            
+            interactionSave.append("goldKeyRugMoved")
+        
+        if goldHatchOpenedCheck:
+            
+            interactionSave.append("goldHatchOpened")
+        
+        if finalDoorOpenedCheck:
+            
+            interactionSave.append("finalDoorOpened")
+            
+        if safeOpenedCheck:
+            
+            interactionSave.append("safeOpened")
+        
+        if wardrobeMovedTrolleyCheck:
+        
+            interactionSave.append("wardrobeMovedTrolley")
+            
+        if panelOpenedCheck:
+            
+            interactionSave.append("panelOpened")
         
         if handTrolleyDroppedOffCheck:
             
@@ -9214,6 +9282,56 @@ X = You
         if goldKeyGotInterCheck:
             
             interactionSave.append("goldKeyGot")
+            
+        # ? MAP CHECKS -------------------------------------------------------------------------------------------------------------
+        
+        roomOneCheck = re.search("FirstRoom=True", saveContent)
+        
+        roomTwoCheck = re.search("SecondRoom=True", saveContent)
+        
+        roomThreeCheck = re.search("ThirdRoom=True", saveContent)
+        
+        roomFourCheck = re.search("FourthRoom=True", saveContent)
+        
+        roomFiveCheck = re.search("FifthRoom=True", saveContent)
+        
+        location3Check = re.search("Location=3", saveContent)
+        
+        location4Check = re.search("Location=4", saveContent)
+        
+        location5Check = re.search("Location=5", saveContent)
+        
+        firstBeenCheck = re.search("FirstBeen=True", saveContent)
+        
+        secondBeenCheck = re.search("SecondBeen=True", saveContent)
+        
+        thirdBeenCheck = re.search("ThirdBeen=True", saveContent)
+        
+        fourthBeenCheck = re.search("FourthBeen=True", saveContent)
+        
+        fifthBeenCheck = re.search("FifthBeen=True", saveContent)
+        
+        if firstBeenCheck: interactionSave.append("firstBeen")
+            
+        if secondBeenCheck: interactionSave.append("secondBeen")
+            
+        if thirdBeenCheck: interactionSave.append("thirdBeen")
+            
+        if fourthBeenCheck: interactionSave.append("fourthBeen")
+            
+        if fifthBeenCheck: interactionSave.append("fifthBeen")
+            
+        if location3Check:
+            
+            interactionSave.append("location3")
+            
+        if location4Check:
+            
+            interactionSave.append("location4")
+            
+        if location5Check:
+            
+            interactionSave.append("location5")
         
         if roomOneCheck:
             
@@ -9244,19 +9362,7 @@ X = You
             mapState.clear()
             mapState.append("5")
             roomFive()    
-            
-        if location3Check:
-            
-            interactionSave.append("location3")
-            
-        if location4Check:
-            
-            interactionSave.append("location4")
-            
-        if location5Check:
-            
-            interactionSave.append("location5")
-    
+
     saveState = open(saveStateLocation)
     
     saveContent = saveState.read()

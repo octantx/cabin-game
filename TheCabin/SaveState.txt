@@ -65,6 +65,14 @@ ThirdRoom=False
 FourthRoom=False
 FifthRoom=False
 
+Map Beens:
+
+FirstBeen=False
+SecondBeen=False
+ThirdBeen=False
+FourthBeen=False
+FifthBeen=False
+
 Killer Location:
 Location=0
 
