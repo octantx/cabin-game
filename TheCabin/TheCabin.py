@@ -9033,8 +9033,12 @@ X = You
             
         if quillGotCheck:
             
-            findFeather = inventory.index("feather"); inventory.pop(findFeather)
-            inventory.append("quill")
+            try:
+                findFeather = inventory.index("feather"); inventory.pop(findFeather)
+                inventory.append("quill")
+            
+            except:
+                inventory.append("quill")
             
         if mapGotCheck:
             
@@ -9047,16 +9051,16 @@ X = You
                 findQuill = inventory.index("quill") # ? step three
 
                 inventory.pop(findQuill) # ? step four
-       
+
                 findFeather = inventory.index("feather")
         
-                inventory.pop(findFeather)
+                inventory.pop(findFeather) # ? step five
         
                 inventory.append("map")
                 
             except:
             
-                inventory.append("map") # ? step five
+                inventory.append("map") # ? step six
             
         if knifeGotCheck:
             
