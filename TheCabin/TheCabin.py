@@ -9033,6 +9033,7 @@ X = You
             
         if quillGotCheck:
             
+            findFeather = inventory.index("feather"); inventory.pop(findFeather)
             inventory.append("quill")
             
         if mapGotCheck:
@@ -9040,24 +9041,18 @@ X = You
             try:
             
                 findPaper = inventory.index("paper")  # ? step one
-                
-                print(f"paper index: {findPaper}")
-                
-                print(inventory)
-                
+
                 inventory.pop(findPaper) # ? step two
-                
-                print(inventory)
-        
+
                 findQuill = inventory.index("quill") # ? step three
-                
-                print(f"quill index: {findQuill}")
-                
-                print(inventory)
-                
+
                 inventory.pop(findQuill) # ? step four
-                
-                print(inventory)
+       
+                findFeather = inventory.index("feather")
+        
+                inventory.pop(findFeather)
+        
+                inventory.append("map")
                 
             except:
             
