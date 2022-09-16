@@ -23,14 +23,13 @@
     # * The Cabin | 20/9/21 | version B0.92: Touch ups across functions and kitchen content done
     # * The Cabin | 20/9/21 | version B0.95: Kitchen fully complete and living room ready to be made
     # * The Cabin | 25/9/21 | version F1.00: Full game complete, full release, however, unpolished
-    # * The Cabin | ??/?/21 | version F1.??: Tribulative Moniker
     
 # ? Blankspace function is created to clear up the terminal periodically
 def blankspace():
     for i in range(45): print("")
         
 # ? Save location variable so the path can be change (mostly for development purposes)
-saveStateLocation = "TheCabin/SaveState.txt" # ! To be changed to just "SaveState.txt" when packaging
+saveStateLocation = "save.txt" # ! To be changed to just "SaveState.txt" when packaging
 
 # ? Version number variable is created so I don't have to find every instance of the version being mentioned and change it
 ver = "v1.00"
