@@ -1,3 +1,8 @@
-# cabin-game
+<div align="center">
+<h1>The Cabin</h1>
+<strong>A terminal based text adventure where you have to escape a killer's cabin.</strong>
+</div>
 
-The Cabin is a terminal based game made in the Python language. Created for a computer science project it turned into a mass of code at over 9000+ lines (the biggest I've ever achieved). The game itself is a horror text adventure where you can perform actions, look at objects, and piece together the mystery of your arrival.
+<br>
+
+The Cabin is a terminal based game made in the Python, it was made for a computer science class and allowed me to learn a lot about the language. The game itself is a horror text adventure where you can perform actions, look at objects, and piece together the mystery of your arrival.
